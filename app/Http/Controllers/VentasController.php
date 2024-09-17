@@ -45,7 +45,7 @@ class VentasController extends Controller
         $impresora->setEmphasis(false);
         $impresora->text("Cliente: ");
         $impresora->text($venta->cliente->nombre . "\n");
-        $impresora->text("\nhttps://parzibyte.me/blog\n");
+        $impresora->text("\nhttps://farmacia-chipiltepec.com\n");
         $impresora->text("\n===============================\n");
         $total = 0;
         foreach ($venta->productos as $producto) {
@@ -64,7 +64,7 @@ class VentasController extends Controller
         $impresora->setJustification(Printer::JUSTIFY_CENTER);
         $impresora->setTextSize(1, 1);
         $impresora->text("Gracias por su compra\n");
-        $impresora->text("https://parzibyte.me/blog");
+        $impresora->text("https://farmacia-chipiltepec.com");
         $impresora->feed(5);
         $impresora->close();
         return redirect()->back()->with("mensaje", "Ticket impreso");
